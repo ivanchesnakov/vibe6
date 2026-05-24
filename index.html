@@ -1,63 +1,59 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV — Your Name</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <main class="cv">
-      <header class="cv__header">
-        <h1>Your Name</h1>
-        <p class="cv__tagline">
-          One-line summary. Who you are, what you do, what you want next.
-        </p>
-        <ul class="cv__contacts">
-          <li><a href="mailto:you@example.com">you@example.com</a></li>
-          <li><a href="https://github.com/yourname">github.com/yourname</a></li>
-        </ul>
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Ваше Имя</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        🌙
+      </button>
+      <h1 class="name" id="nameTrigger">Чеснаков Иван</h1>
+      <p class="tagline">Студент СПБПУ</p>
+      <div class="contacts">
+        <a href="mailto::chesnakovivan019@gmail.com">📧 chesnakovivan019@gmail.com</a>
+        <a href="https://github.com" target="_blank">💼 GitHub</a>
+        <a href="tel:+79313070946"> +7 931 307 09 46</a>
+      </div>
+    </header>
 
-        <!-- TODO: твой нестандартный элемент.
-             Пример: переключатель темы, anim, easter egg. -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          🌗
-        </button>
-      </header>
-
-      <section>
-        <h2>About</h2>
-        <p>
-          Two or three sentences. What you care about, what you've shipped,
-          where you're heading.
-        </p>
+    <main>
+      <section class="summary">
+        <h2>Обо мне</h2>
+        <p>Мне 18 лет. Учусь в СПБПУ на матобесе. Мечта - попасть на Роллан-Гаррос. Абсолютный чемпион турнира по настольному теннису в БЕЛАРУСИ 2019</p>
       </section>
 
-      <section>
-        <h2>Experience / Projects</h2>
-        <article>
-          <h3>Project / Role Title</h3>
-          <p class="cv__meta">Company / Context · 2024 — now</p>
-          <p>What you did. Why it mattered. What shipped.</p>
+      <section class="experience">
+        <h2>Опыт & Проекты</h2>
+        <article class="card">
+          <h3>🚀 Мой экспириенс</h3>
+          <p class="period">2023 — Настоящее время</p>
+          <ul>
+            <li>Создал собственный сайт для рассчёта кредитов и вкладов, обучения финансовой граммотности.(домен платный - ссылки не будет)</li>
+            <li>работал в прогрессивной компании Beetroute (тестировал приложение)</li>
+          </ul>
         </article>
-        <article>
-          <h3>Another One</h3>
-          <p class="cv__meta">Context · 2023</p>
-          <p>Same shape. Keep it tight.</p>
-        </article>
-      </section>
 
-      <section>
-        <h2>Skills</h2>
-        <ul class="cv__skills">
-          <li>JavaScript</li>
-          <li>Git</li>
-          <li>CI/CD</li>
-          <li>Other thing you actually know</li>
-        </ul>
+      <section class="skills">
+        <h2>Навыки</h2>
+        <div class="skills-grid">
+          <span class="skill-tag" data-tooltip="Вот в этом году учебном изучаю">С/С++</span>
+          <span class="skill-tag" data-tooltip="Изучал в школе">Python</span>
+          <span class="skill-tag" data-tooltip="вдруг понадобится) занимался 10 лет">Плавание</span>
+        </div>
       </section>
     </main>
 
-    <script type="module" src="./src/main.js"></script>
-  </body>
+    <footer class="footer">
+      <p>© 2026 Иван Чеснаков. Сделано с ❤️ и ☕</p>
+      <span class="hint">👀 Попробуй нажать на имя 3 раза подряд</span>
+    </footer>
+  </div>
+
+  <script src="src/main.js"></script>
+</body>
 </html>
